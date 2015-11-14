@@ -13,17 +13,44 @@ class HappinessViewController: UIViewController, FaceViewDataSource {
         didSet {
             print("Happiness = \(happiness)");
             happiness = min(max(happiness,0),100)
+            history.append(happiness)
             updateUI()
         }
     }
+    
+    
+    private let defaults = NSUserDefaults.standardUserDefaults()
+    
+    var history : [Int] {
+        get {
+            return defaults.objectForKey(Constants.HistoryKey) as? [Int] ?? [];
+        }
+        set {
+            defaults.setObject(newValue, forKey: Constants.HistoryKey)
+        }
+    }
+    
+    func appendRecord(d: Int) {
+        history.append(d);
+    }
+    
     
     func smilinessForFaceView(sender: FaceView) -> Double? {
         return (Double(happiness - 50) / 50);
     }
     
     struct Constants {
+        static let HistoryKey = "History Key";
         static let HappyFactor : CGFloat = 4;
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if let vc = segue.destinationViewController as? HistoryViewController {
+            vc.setHistory(self.history)
+        }
+    }
+    
     
     @IBAction func panGestureReceived(gesture: UIPanGestureRecognizer) {
         switch gesture.state {

@@ -125,7 +125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1356" y="-329"/>
+            <point key="canvasLocation" x="809" y="-745"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="Zkn-27-f5t">
@@ -138,7 +138,44 @@
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fnp-8n-GfT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-176" y="110"/>
+            <point key="canvasLocation" x="-723" y="-306"/>
+        </scene>
+        <!--History View Controller-->
+        <scene sceneID="93X-AH-irj">
+            <objects>
+                <viewController id="MV8-jq-2ty" customClass="HistoryViewController" customModule="Psychologist" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="COr-7Y-qgb"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jw3-XV-eA2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c2Y-aY-VEZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2Jx-Zb-EAS">
+                                <rect key="frame" x="20" y="20" width="600" height="580"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="9sW-G6-DAO"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2Jx-Zb-EAS" firstAttribute="leading" secondItem="c2Y-aY-VEZ" secondAttribute="leadingMargin" id="Rvw-oV-IK4"/>
+                            <constraint firstItem="2Jx-Zb-EAS" firstAttribute="top" secondItem="COr-7Y-qgb" secondAttribute="bottom" id="bOd-HJ-w36"/>
+                            <constraint firstItem="Jw3-XV-eA2" firstAttribute="top" secondItem="2Jx-Zb-EAS" secondAttribute="bottom" id="d8R-lJ-w6F"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="historyTextView" destination="2Jx-Zb-EAS" id="dTq-kD-0ka"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pWD-oO-eEF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1536" y="188"/>
         </scene>
         <!--Face Status-->
         <scene sceneID="qYK-Ye-Dvq">
@@ -180,7 +217,15 @@
                             <outletCollection property="gestureRecognizers" destination="lsV-fk-Lbz" appends="YES" id="aqj-9D-Q4O"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Face Status" id="lRn-G9-4xF"/>
+                    <navigationItem key="navigationItem" title="Face Status" id="lRn-G9-4xF">
+                        <barButtonItem key="rightBarButtonItem" title="History" id="N6J-nS-jX6">
+                            <connections>
+                                <segue destination="MV8-jq-2ty" kind="popoverPresentation" identifier="Show Diagnostic History" popoverAnchorBarButtonItem="N6J-nS-jX6" id="6Cf-mr-EmD">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="faceView" destination="dk9-d0-sEb" id="T58-Wv-i2H"/>
                     </connections>
@@ -192,7 +237,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1319" y="604"/>
+            <point key="canvasLocation" x="822" y="188"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="y1x-XU-eKr">
@@ -210,7 +255,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WFY-Lu-Irs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="630" y="-329"/>
+            <point key="canvasLocation" x="83" y="-745"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="14n-Oo-UcD">
@@ -228,7 +273,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="55D-7v-nbB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="621" y="604"/>
+            <point key="canvasLocation" x="74" y="188"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

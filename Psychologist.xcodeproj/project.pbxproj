@@ -15,6 +15,7 @@
 		DA3A24961BEF1CD60023C848 /* PsychologistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3A24951BEF1CD60023C848 /* PsychologistTests.swift */; };
 		DA50BBB21BF6C44D00D14A11 /* HappinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA50BBB01BF6C44D00D14A11 /* HappinessViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		DA50BBB31BF6C44D00D14A11 /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA50BBB11BF6C44D00D14A11 /* FaceView.swift */; settings = {ASSET_TAGS = (); }; };
+		DA50BBB51BF6F5AE00D14A11 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA50BBB41BF6F5AE00D14A11 /* HistoryViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		DA3A24971BEF1CD60023C848 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA50BBB01BF6C44D00D14A11 /* HappinessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HappinessViewController.swift; sourceTree = "<group>"; };
 		DA50BBB11BF6C44D00D14A11 /* FaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
+		DA50BBB41BF6F5AE00D14A11 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				DA3A24871BEF1CD60023C848 /* Assets.xcassets */,
 				DA3A24891BEF1CD60023C848 /* LaunchScreen.storyboard */,
 				DA3A248C1BEF1CD60023C848 /* Info.plist */,
+				DA50BBB41BF6F5AE00D14A11 /* HistoryViewController.swift */,
 			);
 			path = Psychologist;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				DA3A24831BEF1CD60023C848 /* PsychologistViewController.swift in Sources */,
 				DA50BBB21BF6C44D00D14A11 /* HappinessViewController.swift in Sources */,
 				DA3A24811BEF1CD60023C848 /* AppDelegate.swift in Sources */,
+				DA50BBB51BF6F5AE00D14A11 /* HistoryViewController.swift in Sources */,
 				DA50BBB31BF6C44D00D14A11 /* FaceView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
