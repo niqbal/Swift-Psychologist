@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HappinessViewController: UIViewController, FaceViewDataSource {
+class HappinessViewController: UIViewController, FaceViewDataSource, UIPopoverPresentationControllerDelegate {
     var happiness : Int =  90 { //0 = very sad, 100 = ecstatic
         didSet {
             print("Happiness = \(happiness)");
@@ -47,10 +47,17 @@ class HappinessViewController: UIViewController, FaceViewDataSource {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if let vc = segue.destinationViewController as? HistoryViewController {
+            if let ppc = vc.popoverPresentationController {
+                ppc.delegate = self
+            }
+            
             vc.setHistory(self.history)
         }
     }
     
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .None;
+    }
     
     @IBAction func panGestureReceived(gesture: UIPanGestureRecognizer) {
         switch gesture.state {
