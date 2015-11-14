@@ -23,5 +23,16 @@ class HistoryViewController: UIViewController {
         self.historyString = "\(hist)"
     }
     
+    override var preferredContentSize : CGSize {
+        get {
+            if historyTextView != nil && presentingViewController != nil {
+                return historyTextView.sizeThatFits(presentingViewController!.view.bounds.size)
+            } else {
+                return super.preferredContentSize
+            }            
+        }
+        set { super.preferredContentSize = newValue }
+    }
+    
     
 }

@@ -153,9 +153,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2Jx-Zb-EAS">
-                                <rect key="frame" x="20" y="20" width="600" height="580"/>
+                                <rect key="frame" x="20" y="20" width="560" height="560"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="600" id="9sW-G6-DAO"/>
+                                    <constraint firstAttribute="width" constant="560" id="9sW-G6-DAO"/>
                                 </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -166,7 +166,7 @@
                         <constraints>
                             <constraint firstItem="2Jx-Zb-EAS" firstAttribute="leading" secondItem="c2Y-aY-VEZ" secondAttribute="leadingMargin" id="Rvw-oV-IK4"/>
                             <constraint firstItem="2Jx-Zb-EAS" firstAttribute="top" secondItem="COr-7Y-qgb" secondAttribute="bottom" id="bOd-HJ-w36"/>
-                            <constraint firstItem="Jw3-XV-eA2" firstAttribute="top" secondItem="2Jx-Zb-EAS" secondAttribute="bottom" id="d8R-lJ-w6F"/>
+                            <constraint firstItem="Jw3-XV-eA2" firstAttribute="top" secondItem="2Jx-Zb-EAS" secondAttribute="bottom" constant="20" id="d8R-lJ-w6F"/>
                         </constraints>
                     </view>
                     <connections>
